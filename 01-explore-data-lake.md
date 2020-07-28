@@ -61,8 +61,9 @@ In this task, you will browse your data lake using SQL On-demand.
 
 Repeat the following sets for:
 
-| Pipeline Name | Relevant URL |
-    --- | ---
-   PastLaunches | `launches/past`
-   Payload | `payloads`
-   Rockets | `rockets`
+
+Pipeline Name | Relevant URL
+--- | ---
+PastLaunches | `launches/past`
+Payload | `payloads`
+Rockets | `rockets`

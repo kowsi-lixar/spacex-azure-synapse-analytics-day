@@ -21,3 +21,15 @@ In this task, you will load the data into your data lake. Use Azure Storage Expl
 6. Verify file is created
 
   ![Open Data hub in Synapse Analytics Studio](./media/ex02-orchestrate-03.PNG)
+
+------------------------------------------------------------------------------------
+    
+
+## Repeat steps #3-6 for following:
+
+
+Pipeline Name 
+--- | ---
+PastLaunches 
+Payload
+Rockets

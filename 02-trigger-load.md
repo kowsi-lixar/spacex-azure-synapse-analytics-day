@@ -14,6 +14,10 @@ In this task, you will load the data into your data lake. Use Azure Storage Expl
 
   ![Open Data hub in Synapse Analytics Studio](./media/ex02-orchestrate-01.PNG)
   
-5. Select 'Tigger now' in
+5. Select 'Tigger now', click 'OK' to trigger
 
   ![Open Data hub in Synapse Analytics Studio](./media/ex02-orchestrate-02.PNG)
+  
+6. Verify file is created
+
+  ![Open Data hub in Synapse Analytics Studio](./media/ex02-orchestrate-03.PNG)

@@ -1,4 +1,4 @@
-## Task 1 - Explore the data lake with Azure Synapse SQL On-demand
+## Task 1 - Ingest Raw Data
 
 In this task, you will browse your data lake using SQL On-demand.
 
@@ -58,8 +58,10 @@ In this task, you will browse your data lake using SQL On-demand.
 
     ![Open Data hub in Synapse Analytics Studio](./media/ex01-ingest-10.PNG)
     
+ ------------------------------------------------------------------------------------
+    
 
-Repeat the following sets for:
+## Repeat the following sets for:
 
 
 Pipeline Name | Relevant URL

@@ -1,6 +1,6 @@
 ## Task 1 - Ingest Raw Data
 
-In this task, you will browse your data lake using SQL On-demand.
+In this task, you will create an ingestion task
 
 1. In a web browser, navigate to the Azure portal (`https://portal.azure.com`) and login with your credentials. Then select **Resource groups**.
 

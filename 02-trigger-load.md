@@ -7,8 +7,6 @@ In this task, you will load the data into your data lake. Use Azure Storage Expl
 2. Select the **Synapse Analytics** workspace.
 
 3. On the Synapse workspace blade, open Synapse Analytics Studio by selecting **Launch Synapse Studio** from the toolbar.
-
-   ![Open Data hub in Synapse Analytics Studio](./media/ex01-ingest-01.PNG)
    
 4. In 'Orchestrate', input 'Task Name: LaunchPad' and select 'Run once now', click 'Next'
 

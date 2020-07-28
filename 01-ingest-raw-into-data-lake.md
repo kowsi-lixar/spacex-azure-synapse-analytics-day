@@ -61,7 +61,7 @@ In this task, you will browse your data lake using SQL On-demand.
  ------------------------------------------------------------------------------------
     
 
-## Repeat the following sets for:
+## Repeat steps #5-16 for following:
 
 
 Pipeline Name | Relevant URL

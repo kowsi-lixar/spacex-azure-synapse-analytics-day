@@ -59,8 +59,9 @@ In this task, you will browse your data lake using SQL On-demand.
     ![Open Data hub in Synapse Analytics Studio](./media/ex01-ingest-10.PNG)
     
 
-Repeat the following sets for 
-Pipeline Name | Relevant URL |
+Repeat the following sets for:
+
+| Pipeline Name | Relevant URL |
     --- | ---
    PastLaunches | `launches/past`
    Payload | `payloads`

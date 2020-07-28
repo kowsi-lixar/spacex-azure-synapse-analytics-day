@@ -27,14 +27,6 @@ In this task, you will load the data into your data lake. Use Azure Storage Expl
 
 ## Repeat steps #3-6 for following:
 
-
-
- ------------------------------------------------------------------------------------
-    
-
-## Repeat steps #5-16 for following:
-
-
 Pipeline Name | Relevant URL
 --- | ---
 PastLaunches | `launches/past`

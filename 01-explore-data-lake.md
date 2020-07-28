@@ -34,7 +34,7 @@ In this task, you will browse your data lake using SQL On-demand.
 
   ![Open Data hub in Synapse Analytics Studio](./media/ex01-ingest-05.PNG)
 
-10. In the 'Specify REST dataset properties' enter 'launchpads' as 'Relevant URL'. Click 'Preview' to view the load, click 'Next'
+10. In the 'Specify REST dataset properties' enter 'launchpads' as 'Relevant URL'. Click 'Preview' to view the load, enable 'Export as-is to JSON files or Cosmos DB collection'
 
   ![Open Data hub in Synapse Analytics Studio](./media/ex01-ingest-06.PNG)
   
@@ -46,3 +46,22 @@ In this task, you will browse your data lake using SQL On-demand.
 
     ![Open Data hub in Synapse Analytics Studio](./media/ex01-ingest-08.PNG)
 
+13. In 'Choose the output file or folder' for 'Folder path' it's recommended to use the following folder structure '/spacex/data/launchpads' File Name 'launchpads.json'
+
+    ![Open Data hub in Synapse Analytics Studio](./media/ex01-ingest-09.PNG)
+
+14. Click 'Next' in 'File format settings' ensure 'JSON Format' is selected
+
+15. Click 'Next' in Summary. 
+
+16. Deployment successful 
+
+    ![Open Data hub in Synapse Analytics Studio](./media/ex01-ingest-10.PNG)
+    
+
+Repeat the following sets for 
+Pipeline Name | Relevant URL |
+    --- | ---
+   PastLaunches | `launches/past`
+   Payload | `payloads`
+   Rockets | `rockets`

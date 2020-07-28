@@ -38,5 +38,11 @@ In this task, you will browse your data lake using SQL On-demand.
 
   ![Open Data hub in Synapse Analytics Studio](./media/ex01-ingest-06.PNG)
   
-11. In 'Destination data store' select '+ Create new connection', select 'REST' and 'Continue'
+11. In 'Destination data store' select '+ Create new connection', select 'Data Lake Gen2' and 'Continue'
+
+    ![Open Data hub in Synapse Analytics Studio](./media/ex01-ingest-07.PNG)
+
+12. For 'Authorization Method' select 'Account key' and navigate to your 'asadatalake01' created in setup, verify connection 
+
+    ![Open Data hub in Synapse Analytics Studio](./media/ex01-ingest-08.PNG)
 

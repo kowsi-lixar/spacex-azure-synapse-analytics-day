@@ -41,10 +41,9 @@ In this exercise, you will leverage Apache Spark to write PySpark code to transf
       launchpads_df = spark.read.json("/synapse/data/spacex/launchpads/*.json")
       launches_df = spark.read.json("/synapse/data/spacex/launches/*.json")
    ```
-   
-  ```py
+   ```py
       rockets_df.registerTempTable( "rockets" )
       payloads_df.registerTempTable( "payloads" )
       launchpads_df.registerTempTable( "launchpads" )
       launches_df.registerTempTable( "launches" )
-   ```
+    ```

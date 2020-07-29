@@ -1,6 +1,10 @@
 ## Task 1 - Ingest Raw Data
 
-In this task, you will create an ingestion task connecting to the spacex api https://docs.spacexdata.com/?version=latest
+In this task, you will create an ingestion pipeline connecting to the spacex api https://docs.spacexdata.com/?version=latest
+
+Reads data from a source data store.
+Performs serialization/deserialization, compression/decompression, column mapping, and so on. It performs these operations based on the configuration of the input dataset, output dataset, and Copy activity.
+Writes data to the sink/destination data store.
 
 1. In a web browser, navigate to the Azure portal (`https://portal.azure.com`) and login with your credentials. Then select **Resource groups**.
 

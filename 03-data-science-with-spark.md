@@ -35,7 +35,7 @@ In this exercise, you will leverage Apache Spark to write PySpark code to transf
    ```py
       import pyspark.sql
       
-      ## Build dataframes from each API Method ##
+     ## Build dataframes from each API Method ##
       rockets_df = spark.read.json("/synapse/data/spacex/rockets/*.json")
       payloads_df = spark.read.json("/synapse/data/spacex/payloads/*.json")
       launchpads_df = spark.read.json("/synapse/data/spacex/launchpads/*.json")

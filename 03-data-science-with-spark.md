@@ -48,7 +48,7 @@ In this exercise, you will leverage Apache Spark to write PySpark code to transf
       launches_df.registerTempTable( "launches" )
     ```
     ```py
-rockets_curated = spark.sql("   SELECT id, \
+      rockets_curated = spark.sql("   SELECT id, \
                                 rocket_id, \
                                 rocket_name, \
                                 rocket_type, \
@@ -71,10 +71,61 @@ rockets_curated = spark.sql("   SELECT id, \
                                 flickr_images  \
                                 FROM rockets")
 
-rockets_images = spark.sql("    SELECT id, \
+      rockets_images = spark.sql("    SELECT id, \
                                 img, \
                                 row_number() OVER (Partition by id ORDER BY null) as ImageNumber \
                                 FROM rockets \
                                 lateral view explode(flickr_images) flickr_images as img ")
-display(rockets_curated)
+      display(rockets_curated)
      ```
+    ```py
+   payloads_curated = spark.sql("   SELECT uid, payload_id, payload_mass_kg, payload_type, reused, orbit, nationality, flight_time_sec, manufacturer FROM payloads")
+
+   display(payloads_curated)
+     ```
+     ```py
+   launchpads_curated = spark.sql("   SELECT id, \
+                                    site_id, \
+                                    site_name_long, \
+                                    name, \
+                                    status, \
+                                    successful_launches, \
+                                    location.latitude as loc_lat, \
+                                    location.longitude as loc_long, \
+                                    location.name as loc_name, \
+                                    location.region as loc_region  \
+                                    FROM launchpads")
+
+   display(launchpads_curated)
+     ```
+     ```py
+     launches_curated = spark.sql("   SELECT flight_number, \
+                                  details, \
+                                  is_tentative, \
+                                  launch_date_local, \
+                                  timestamp(launch_date_utc)  as launch_date_utc, \
+                                  launch_success, \
+                                  launch_year, \
+                                  mission_id, \
+                                  mission_name, \
+                                  rocket.rocket_id, \
+                                  rocket.rocket_name, \
+                                  rocket.rocket_type, \
+                                  upcoming, \
+                                  launch_failure_details.reason as fail_reason, \
+                                  launch_failure_details.altitude as fail_alt, \
+                                  launch_failure_details.time as fail_time, \
+                                  launch_site.site_id, \
+                                  launch_site.site_name, \
+                                  links.mission_patch_small \
+                                  FROM launches ")
+
+      display(launches_curated)
+      ```
+      ```py
+      rockets_curated.write.mode("overwrite").saveAsTable("tblRockets")
+      rockets_images.write.mode("overwrite").saveAsTable("tblRockets_Images")
+      payloads_curated.write.mode("overwrite").saveAsTable("tblPayloads")
+      launchpads_curated.write.mode("overwrite").saveAsTable("tblLaunchpads")
+      launches_curated.write.mode("overwrite").saveAsTable("tblLaunches")
+      ```

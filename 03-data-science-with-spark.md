@@ -1,4 +1,4 @@
-## Task 2 - Trigger Load
+## Task 3 - Data Science with Apache Spark
 
 Azure Synapse Analytics provides a unified environment for both data science and data engineering. What this means in practice, is that your data scientists can train and deploy models using Azure Synapse Analytics and your data engineers can write T-SQL queries that use those models to make predictions against tabular data stored in a SQL Pool database table.
 

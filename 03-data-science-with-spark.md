@@ -31,6 +31,7 @@ In this exercise, you will leverage Apache Spark to write PySpark code to transf
    ![Open Data hub in Synapse Analytics Studio](./media/ex03-develop-05.PNG)
 
 9. In put the following code:
+
    ```py
       import pyspark.sql
       

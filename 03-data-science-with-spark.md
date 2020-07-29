@@ -137,3 +137,7 @@ In this exercise, you will leverage Apache Spark to write PySpark code to transf
       launchpads_curated.write.mode("overwrite").saveAsTable("tblLaunchpads")
       launches_curated.write.mode("overwrite").saveAsTable("tblLaunches")
       ```
+      
+      10. Click 'Run All' to execute scripts
+   
+    ![Open Data hub in Synapse Analytics Studio](./media/ex03-develop-10.PNG)

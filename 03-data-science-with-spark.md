@@ -29,3 +29,21 @@ In this exercise, you will leverage Apache Spark to write PySpark code to transf
 8.  Create a Notebook
 
    ![Open Data hub in Synapse Analytics Studio](./media/ex03-develop-05.PNG)
+
+9. In put the following code:
+   ```py
+      import pyspark.sql
+      
+      ## Build dataframes from each API Method ##
+      rockets_df = spark.read.json("/synapse/data/spacex/rockets/*.json")
+      payloads_df = spark.read.json("/synapse/data/spacex/payloads/*.json")
+      launchpads_df = spark.read.json("/synapse/data/spacex/launchpads/*.json")
+      launches_df = spark.read.json("/synapse/data/spacex/launches/*.json")
+   ```
+   
+  ```py
+      rockets_df.registerTempTable( "rockets" )
+      payloads_df.registerTempTable( "payloads" )
+      launchpads_df.registerTempTable( "launchpads" )
+      launches_df.registerTempTable( "launches" )
+   ```

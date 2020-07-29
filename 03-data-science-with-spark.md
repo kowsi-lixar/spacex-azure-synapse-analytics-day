@@ -47,3 +47,34 @@ In this exercise, you will leverage Apache Spark to write PySpark code to transf
       launchpads_df.registerTempTable( "launchpads" )
       launches_df.registerTempTable( "launches" )
     ```
+    ```py
+rockets_curated = spark.sql("   SELECT id, \
+                                rocket_id, \
+                                rocket_name, \
+                                rocket_type, \
+                                stages, \
+                                success_rate_pct, \
+                                wikipedia, \
+                                active, \
+                                boosters, \
+                                company, \
+                                cost_per_launch, \
+                                diameter.meters as diameter_m, \
+                                height.meters as height_m, \
+                                mass.kg as mass_kg, \
+                                first_stage.burn_time_sec as first_stage_burn_time_sec, \
+                                first_stage.engines as first_stage_engines, \
+                                first_stage.reusable as first_stage_reusable, \
+                                second_stage.burn_time_sec as second_stage_burn_time_sec, \
+                                second_stage.engines as second_stage_engines, \
+                                second_stage.reusable as second_stage_reusable, \
+                                flickr_images  \
+                                FROM rockets")
+
+rockets_images = spark.sql("    SELECT id, \
+                                img, \
+                                row_number() OVER (Partition by id ORDER BY null) as ImageNumber \
+                                FROM rockets \
+                                lateral view explode(flickr_images) flickr_images as img ")
+display(rockets_curated)
+     ```

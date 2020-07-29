@@ -84,9 +84,11 @@ In this exercise, you will leverage Apache Spark to write PySpark code to transf
 
    display(payloads_curated)
      ```
+     
  ![Open Data hub in Synapse Analytics Studio](./media/ex03-develop-07.PNG)
+ 
      ```py
-   launchpads_curated = spark.sql("   SELECT id, \
+      launchpads_curated = spark.sql("   SELECT id, \
                                     site_id, \
                                     site_name_long, \
                                     name, \
@@ -98,9 +100,11 @@ In this exercise, you will leverage Apache Spark to write PySpark code to transf
                                     location.region as loc_region  \
                                     FROM launchpads")
 
-   display(launchpads_curated)
+      display(launchpads_curated)
      ```
+     
   ![Open Data hub in Synapse Analytics Studio](./media/ex03-develop-08.PNG)
+  
      ```py
      launches_curated = spark.sql("   SELECT flight_number, \
                                   details, \
@@ -125,7 +129,9 @@ In this exercise, you will leverage Apache Spark to write PySpark code to transf
 
       display(launches_curated)
       ```
+      
  ![Open Data hub in Synapse Analytics Studio](./media/ex03-develop-09.PNG)
+ 
       ```py
       rockets_curated.write.mode("overwrite").saveAsTable("tblRockets")
       rockets_images.write.mode("overwrite").saveAsTable("tblRockets_Images")

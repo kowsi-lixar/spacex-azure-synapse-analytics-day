@@ -3,11 +3,11 @@
 
 1. Create a new resource group
 
-2. In the resource group, create a regular blob storage account.
+2. In the resource group, create an empty Azure Synapse Analytics workspace.
 
-3. In the resource group, create an empty Azure Synapse Analytics workspace.
+3. Create a Data Lake Gen2 account from the Azure Synapse Analytics setup
 
-4. Create the following file systems in the blob storage account of the workspace: `spacex`.
+4. Create the following file systems in the storage account of the container: `spacex`.
 
 5. Create a linked service to the first pool of the workspace. Configure it to connect with username and password, and use the credentials of the workspace's SQL admin account. It is recommended to name the linked service `spacexcluster` to simplify the import of datasets, data flows, and pipelines later.
 

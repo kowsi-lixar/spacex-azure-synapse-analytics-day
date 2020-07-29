@@ -36,10 +36,10 @@ In this exercise, you will leverage Apache Spark to write PySpark code to transf
       import pyspark.sql
       
      ## Build dataframes from each API Method ##
-      rockets_df = spark.read.json("/synapse/data/spacex/rockets/*.json")
-      payloads_df = spark.read.json("/synapse/data/spacex/payloads/*.json")
-      launchpads_df = spark.read.json("/synapse/data/spacex/launchpads/*.json")
-      launches_df = spark.read.json("/synapse/data/spacex/launches/*.json")
+      rockets_df = spark.read.json("/spacex/data/rockets/*.json")
+      payloads_df = spark.read.json("/spacex/data/payloads/*.json")
+      launchpads_df = spark.read.json("/spacex/data/launchpads/*.json")
+      launches_df = spark.read.json("/spacex/data/launches/*.json")
    ```
    ```py
       rockets_df.registerTempTable( "rockets" )

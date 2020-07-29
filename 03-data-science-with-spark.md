@@ -78,7 +78,11 @@ In this exercise, you will leverage Apache Spark to write PySpark code to transf
                                 lateral view explode(flickr_images) flickr_images as img ")
       display(rockets_curated)
      ```
- ![Open Data hub in Synapse Analytics Studio](./media/ex03-develop-06.PNG)
+     
+     
+      ![Open Data hub in Synapse Analytics Studio](./media/ex03-develop-06.PNG)
+ 
+ 
     ```py
    payloads_curated = spark.sql("   SELECT uid, payload_id, payload_mass_kg, payload_type, reused, orbit, nationality, flight_time_sec, manufacturer FROM payloads")
 

@@ -128,7 +128,6 @@ In this exercise, you will leverage Apache Spark to write PySpark code to transf
 
       display(launches_curated)
       ```
-   ![Open Data hub in Synapse Analytics Studio](./media/ex03-develop-09.PNG)
  
       ```py
       rockets_curated.write.mode("overwrite").saveAsTable("tblRockets")
